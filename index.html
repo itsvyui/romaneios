@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GERAR ROMANEIO</title>
+  <link rel="stylesheet" href="./public/styles.css">
+  <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <h1>GERADOR DE ROMANEIO</h1>
+
+  <div class="cadastro box">
+    <h2>Cadastrar Novos Romaneios</h2>
+    <div class="cad-romaneio">
+      <div class="cad-inputs">
+        <span>
+          <label for="cad-nome" id="label-nome">Nome:</label>
+          <input type="text" id="cad-nome" name="nome">
+        </span>
+
+        <span>
+          <label for="cad-cidade">Cidade:</label>
+          <input type="text" id="cad-cidade" name="cidade">
+        </span>
+
+        <span>
+          <label for="cad-end">Endereço:</label>
+          <input type="text" id="cad-end" name="endereco">
+        </span>
+
+        <span>
+          <label for="cad-bairro">Bairro:</label>
+          <input type="text" id="cad-bairro" name="bairro">
+        </span>
+      </div>
+
+      <button type="submit" class="botao" id="submit-cad">CADASTRAR</button>
+    </div>
+  </div>
+
+  <div class="listaRomaneios box">
+    <h2>Lista de Romaneios Cadastrados</h2>
+    <span class="lista-head">
+      <span class="lista-labels">
+        <span>
+          <label for="lista-semana">Semana:</label>
+          <input type="number" id="lista-semana" name="semana" value="15">
+        </span>
+        <span>
+          <label for="lista-ano">Ano:</label>
+          <input type="number" id="lista-ano" name="ano" value="2023">
+        </span>
+      </span>
+      <span class="lista-buttons">
+        <button type="button" id="submit-btn" class="botao">Gerar Romaneio</button>
+      </span>
+
+    </span>
+
+    <div id="rom-container"></div>
+  </div>
+
+  <div id="editForm" class="modal">
+    <div class="modal-content box">
+      <h3>Editar informação</h3>
+      <form class="edit-form">
+        <span>
+          <label for="edit-nome">Nome:</label>
+          <input type="text" id="edit-nome" name="edit-nome">
+        </span>
+
+        <span>
+          <label for="edit-cidade">Cidade:</label>
+          <input type="text" id="edit-cidade" name="edit-cidade">
+        </span>
+
+        <span>
+          <label for="edit-end">Endereço:</label>
+          <input type="text" id="edit-end" name="edit-end">
+        </span>
+
+        <span>
+          <label for="edit-bairro">Bairro:</label>
+          <input type="text" id="edit-bairro" name="edit-bairro">
+        </span>
+
+
+        <button type="submit" id="editSubmit" class="botao">Salvar Alteração</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!--
+  <button id="teste" type="button" onclick="teste()">TESTE</button>
+    <p>Click the button below to generate and download a PDF file:</p>
+    <button onclick="downloadPDF()">Download PDF</button>
+-->
+
+  <script src="index.js"></script>
+</body>
+
+</html>
